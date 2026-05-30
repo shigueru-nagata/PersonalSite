@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shigueru Nagata | Candidato a Doctor en Fisicoquímica Molecular</title>
+
+    <meta name="description" content="Sitio web personal y portafolio de investigación de Shigueru Nagata, candidato a Doctor en Fisicoquímica Molecular especializado en simulaciones computacionales y ciencia de materiales.">
+    <meta name="author" content="Shigueru Nagata">
+
+    <meta property="og:title" content="Shigueru Nagata | Candidato a Doctor">
+    <meta property="og:description" content="Sitio web personal y portafolio de investigación.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- EL CSS ES EXACTAMENTE EL MISMO QUE EL DE LA VERSIÓN EN INGLÉS -->
+    <style>
+        :root {
+            --bg-color: #1A2330;
+            --text-color: #FFFFFF;
+            --accent-color: #E5A93B;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', 'Source Sans Pro', 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+            line-height: 1.8;
+            font-size: 18px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        ::selection {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section { padding: 4rem 0; }
+
+        h1, h2, h3, h4 {
+            color: var(--text-color);
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 0.2rem;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: var(--accent-color);
+            margin-bottom: 0.2rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+        }
+
+        a:hover, a:focus {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        a:focus {
+            outline: 2px dashed var(--accent-color);
+            outline-offset: 4px;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background-color: var(--bg-color);
+            border-bottom: 1px solid var(--accent-color);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .action-btn {
+            border: 2px solid var(--accent-color);
+            padding: 0.4rem 1.2rem;
+            border-radius: 2px;
+            color: var(--accent-color) !important;
+            font-weight: 700;
+        }
+
+        .action-btn:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color) !important;
+            text-decoration: none !important;
+        }
+
+        .lang-switch {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        .lang-switch:hover {
+            opacity: 1;
+        }
+
+        .hero { padding: 6rem 0 4rem; }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 2.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .social-links a {
+            border: 1px solid var(--text-color);
+            padding: 0.6rem 1.2rem;
+            color: var(--text-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-radius: 2px;
+        }
+
+        .social-links a:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--text-color);
+            margin-left: 0.5rem;
+        }
+
+        .timeline-item:last-child { margin-bottom: 1rem; }
+
+        .timeline-meta {
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid var(--accent-color);
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.75rem; }
+            .hero { padding: 4rem 0 2rem; }
+
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links { gap: 1rem; }
+            .timeline-item { padding-left: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav aria-label="Navegación principal">
+                <a href="#inicio" style="font-weight: 700; color: var(--text-color); text-transform: uppercase; letter-spacing: 0.1em;">SN.</a>
+                <ul class="nav-links">
+                    <li><a href="#experiencia">Experiencia</a></li>
+                    <li><a href="#educacion">Educación</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#distinciones">Distinciones</a></li>
+                    <li><a href="https://blog.placeholder.com" target="_blank" rel="noopener noreferrer" class="action-btn" aria-label="Abrir blog en una nueva pestaña">Blog</a></li>
+                    <li><a href="index.html" class="lang-switch" aria-label="Cambiar a Inglés"><strong>ES</strong> / EN</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h1>Shigueru Nagata</h1>
+                <p class="hero-subtitle">Candidato a Doctor en Fisicoquímica Molecular en Universidad Andrés Bello</p>
+
+                <p>Soy candidato a Doctor en el programa de Fisicoquímica Molecular de la Universidad Andrés Bello. Poseo una Maestría en Física por la Universidad Nacional de Ingeniería. Mi investigación se centra en la estructura electrónica de materiales utilizando la teoría del funcional de la densidad. Utilizo herramientas de software como VASP, Quantum ESPRESSO y ORCA, y me apoyo en Python para el análisis de datos y la automatización.</p>
+                <p>Actualmente, estoy trabajando en un proyecto que implementa una búsqueda de alto rendimiento para identificar materiales capaces de modificar estados electrónicos de defectos en el nitruro de boro hexagonal (hBN).</p>
+                <p>Me interesan la química computacional, la ciencia de materiales computacional y la aplicación de técnicas de aprendizaje automático para acelerar el descubrimiento de materiales y los flujos de trabajo de simulación.</p>
+
+                <div class="social-links" aria-label="Redes sociales">
+                    <a href="https://www.linkedin.com/in/shiguerunagata/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/shigueru-nagata" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://twitter.com/NagataShigueru" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+                    <a href="https://mastodon.la/@nagatashigueru" target="_blank" rel="noopener noreferrer">Mastodon</a>
+                    <a href="https://orcid.org/0000-0002-5488-349X" target="_blank" rel="noopener noreferrer">ORCID</a>
+                    <a href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=22405" target="_blank" rel="noopener noreferrer">CTI-VITAE</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="experiencia">
+            <div class="container">
+                <h2>Experiencia</h2>
+
+                <div class="timeline-item">
+                    <h3>Investigador Doctoral</h3>
+                    <span class="timeline-meta">Universidad Andrés Bello | Abril 2023 - actualidad</span>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Miembro del Comité Evaluador de Tesis de Maestría</h3>
+                    <span class="timeline-meta">Universidad Nacional de Ingeniería | Septiembre 2021 - Noviembre 2021</span>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Beca de investigación de Maestría</h3>
+                    <span class="timeline-meta">Universidad Nacional de Ingeniería | Abril 2017 - Septiembre 2019</span>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Investigador colaborador</h3>
+                    <span class="timeline-meta">Universidad Nacional Mayor de San Marcos | Enero 2014 - Diciembre 2016</span>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Practicante pre-profesional</h3>
+                    <span class="timeline-meta">Laboratorio de Física de la Atmósfera y del Océano, UNMSM | Septiembre 2014 - Diciembre 2014</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="educacion">
+            <div class="container">
+                <h2>Educación</h2>
+
+                <div class="timeline-item">
+                    <h3>Doctorado (PhD) en Fisicoquímica Molecular</h3>
+                    <span class="timeline-meta">Universidad Andrés Bello | Marzo 2023 - Actualidad</span>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Maestría en Ciencias (MS) en Física</h3>
+                    <span class="timeline-meta">Universidad Nacional de Ingeniería | Abril 2017 - Septiembre 2019</span>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Licenciatura en Ciencias (BS) en Física</h3>
+                    <span class="timeline-meta">Universidad Nacional Mayor de San Marcos | Abril 2009 - Junio 2015</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos">
+            <div class="container">
+                <h2>Proyectos de investigación</h2>
+
+                <div class="timeline-item">
+                    <h3>Control de estados electrónicos de defectos vía polarización ferroeléctrica en materiales luminiscentes bidimensionales</h3>
+                    <span class="timeline-meta">2023 - actualidad</span>
+                    <p>Se propone realizar una búsqueda de alto rendimiento de materiales ferroeléctricos 2D en bases de datos de materiales, utilizando cálculos de primeros principios fundamentados en la teoría del funcional de la densidad. Este enfoque permitirá identificar ferroeléctricos específicos capaces de influir en los niveles electrónicos de defectos en el nitruro de boro en fase hexagonal y con ello manipular sus estados luminiscentes.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Cálculos de estructura electrónica en perovskitas BiFeO3 y YCrO3</h3>
+                    <span class="timeline-meta">2017 - 2019</span>
+                    <p>Investigué la estructura electrónica de las perovskitas de Ferrita de Bismuto (BiFeO3) y Cromita de Itrio (YCrO3). Utilicé la teoría del funcional de la densidad (DFT) implementada en el software Quantum ESPRESSO.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Estudio teórico del efecto del recubrimiento y funcionalización de nanopartículas magnéticas y nanosistemas relacionados mediante dinámica molecular</h3>
+                    <span class="timeline-meta">2016</span>
+                    <p>Colaboré en el estudio de nanopartículas magnéticas de hierro-carbono con estructura core-shell. Utilicé el método de dinámica molecular implementado en el software LAMMPS. También realicé el análisis de datos de las simulaciones con el lenguaje Python y el software Ovito.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Propiedades térmicas y estructurales de nanopartículas de hierro (Fe) y aluminio (Al) y sus nanoaleaciones (Fe-Al)</h3>
+                    <span class="timeline-meta">2015</span>
+                    <p>Colaboré en el estudio de propiedades térmicas y estructurales de nanopartículas de hierro, nanopartículas de aluminio y sus nanoaleaciones. Utilicé el método de dinámica molecular implementado en el software LAMMPS. También realicé el análisis de datos de las simulaciones con el lenguaje Python y el software Ovito.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Influencia de los defectos preexistentes en las propiedades mecánicas de los nanohilos de cobre</h3>
+                    <span class="timeline-meta">2014</span>
+                    <p>Colaboré en el estudio de las propiedades mecánicas de nanohilos de cobre con defectos preexistentes y sin defectos preexistentes. Utilicé el método de dinámica molecular implementado en el software LAMMPS. También realicé el análisis de datos de las simulaciones con el lenguaje Python y el software Ovito.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="distinciones">
+            <div class="container">
+                <h2>Distinciones</h2>
+
+                <div class="timeline-item">
+                    <h3>Sandwich Training Education Programme (STEP)</h3>
+                    <span class="timeline-meta">ABDUS SALAM INTERNATIONAL CENTRE FOR THEORETICAL PHYSICS (ICTP) | Italia</span>
+                    <p>A través de su Sandwich Training Educational Programme (STEP), el ICTP y su socio de la ONU, el International Atomic Energy Agency (OIEA), ofrecen becas a estudiantes de doctorado en los campos de física, matemáticas y campos relacionados.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Beca de la Universidad Andrés Bello</h3>
+                    <span class="timeline-meta">Universidad Andrés Bello | Chile</span>
+                    <p>Beca de estudios de doctorado en la Universidad Andrés Bello.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Beca de CONCYTEC</h3>
+                    <span class="timeline-meta">Universidad Nacional de Ingeniería y CONCYTEC | Perú</span>
+                    <p>Beca de estudios de maestría en la Universidad Nacional de Ingeniería.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Shigueru Nagata. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
